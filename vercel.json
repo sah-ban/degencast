@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "crons": [
+    {
+      "path": "/api/onchainData",
+      "schedule": "0 13 * * *"
+    }
+  ]
+}
