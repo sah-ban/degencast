@@ -51,11 +51,13 @@ export async function GET() {
     await axios.post('https://publish.justcast.me/', {
       data: {
       text,
-      "parentUrl": "https://warpcast.com/~/channel/iykyk",
-      embeds: [],
+      "parentUrl": "https://warpcast.com/~/channel/degen",
+      embeds: [
+        { url: "https://degen-v2.vercel.app" }
+      ], 
       mentions: [],
       mentionsPositions: []},
-     fid: 545039,
+     fid: 268438,
       signerPrivateKey,
     });
 
