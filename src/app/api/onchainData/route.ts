@@ -51,7 +51,7 @@ export async function GET() {
     await axios.post('https://publish.justcast.me/', {
       data: {
       text,
-      "parentUrl": "https://warpcast.com/~/channel/degen",
+      "parentUrl": "https://warpcast.com/~/channel/degentokenbase",
       embeds: [
         { url: "https://degen-v2.vercel.app" }
       ], 
