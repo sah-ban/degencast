@@ -45,7 +45,11 @@ export async function GET() {
     const priceChange1h= data.fungibleToken.onchainMarketData.priceChange1h.toFixed(2);
     const priceChange24h= data.fungibleToken.onchainMarketData.priceChange24h.toFixed(2);
     // console.log(data); 
-    const text= `Daily $DEGEN Update\n\nPrice: $${price}\n1H Change: ${priceChange1h}%\n24H Change: ${priceChange24h}%`
+    const date = new Date();
+    const day = date.getDate();
+    const month = date.toLocaleString('en-US', { month: 'short' }).toUpperCase();
+    const year = date.getFullYear();
+    const text= `Daily $DEGEN Update ${day} ${month} ${year}\n\nPrice: $${price}\n1H Change: ${priceChange1h}%\n24H Change: ${priceChange24h}%`
     const signerPrivateKey = process.env.PRIVATE_KEY;
 
     await axios.post('https://publish.justcast.me/', {
