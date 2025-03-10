@@ -49,7 +49,7 @@ export async function GET() {
     const day = date.getDate();
     const month = date.toLocaleString('en-US', { month: 'short' }).toUpperCase();
     const year = date.getFullYear();
-    const text= `Daily $DEGEN Update ${day} ${month} ${year}\n\nPrice: $${price}\n1H Change: ${priceChange1h}%\n24H Change: ${priceChange24h}%`
+    const text= `Daily $DEGEN Update - ${day} ${month} ${year}\n\nPrice: $${price}\n1H Change: ${priceChange1h}%\n24H Change: ${priceChange24h}%`
     const signerPrivateKey = process.env.PRIVATE_KEY;
 
     await axios.post('https://publish.justcast.me/', {
